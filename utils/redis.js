@@ -1,9 +1,9 @@
 import redis from 'redis';
 import { promisify } from 'util';
 
-class RedisClient{
-  constructor(){
-    this.client = redis.createClient()
+class RedisClient {
+  constructor() {
+    this.client = redis.createClient();
     this.client.on('error', (err) => console.log('Redis Client Error', err));
   }
 
@@ -20,8 +20,8 @@ class RedisClient{
     this.client.set(key, value, 'EX', duration);
   }
 
-  async del(key) { 
-    this.client.del(key); 
+  async del(key) {
+    this.client.del(key);
   }
 }
 
