@@ -18,15 +18,15 @@ class DBClient {
 
   isAlive() {
     if (this.client) return true;
-    return false;
+    else return false;
   }
 
   async nbUsers() {
-    return this.db.collection('users').countDocuments();
+    return this.client.collection('users').countDocuments();
   }
 
   async nbFiles() {
-    return this.db.collection('files').countDocuments();
+    return this.client.collection('files').countDocuments();
   }
 }
 
