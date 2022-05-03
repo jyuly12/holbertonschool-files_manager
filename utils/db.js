@@ -18,7 +18,7 @@ class DBClient {
 
   isAlive() {
     if (this.client) return true;
-    else return false;
+    return false;
   }
 
   async nbUsers() {
